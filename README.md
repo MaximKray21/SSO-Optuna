@@ -9,12 +9,14 @@
 
 Из всех орбит, удовлетворяющих кинематическим требованиям и жесткому условию покрытия всего экватора при малом крене ($\gamma \le 10^\circ$) за весь цикл кратности, скрипт выбирает орбиту с **минимальной высотой полёта**.
 
-## Настройка вариантов
-В начале файла `main.py` расположены глобальные константы. Измените их под свой вариант из Таблицы 1:
-```python
-K_DAYS = 3        # k, сутки
-GAMMA_MAX = 35.0  # gamma, градус
+## setup
+```bash
+conda create --name sso_optimization python=3.10
+conda activate sso_optimization
+pip3 install -r requirements.txt
 ```
+## run
+python3 main.py --k-days <your days counts> --gamma-max <your gamma degree>
 
 ## Описание констант
 - MU - гравитационный параметр Земли. 
